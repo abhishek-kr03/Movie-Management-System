@@ -21,6 +21,9 @@ public class BookingService {
 
     @Autowired
     private MovieService movieService; // To validate movie availability
+    
+    @Autowired
+    private BookingRestService bookingRestService;  // Autowire the BookingRestService
 
     // Book a movie
     @SuppressWarnings("unused")
@@ -48,5 +51,10 @@ public class BookingService {
     // Fetch booking history by userId
     public List<Booking> getBookingHistory(Long userId) {
         return bookingRepository.findByUserId(userId);
+    }
+    
+    // Call this method to print booking history for a user
+    public void fetchAndPrintBookingHistory(Long userId) {
+        bookingRestService.printBookingHistory(userId);  // Call the RestService to print bookings
     }
 }

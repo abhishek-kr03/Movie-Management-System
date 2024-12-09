@@ -81,6 +81,19 @@ public class Booking {
 	public void setStreamingLink(String streamingLink) {
 		this.streamingLink = streamingLink;
 	}
+
+	  @Override
+	    public String toString() {
+	        return "Booking{" +
+	                "bookingId=" + bookingId +
+	                ", userId=" + userId +
+	                ", movieId=" + movieId +
+	                ", bookingDate=" + bookingDate +
+	                ", status='" + status + '\'' +
+	                ", streamingLink='" + streamingLink + '\'' +
+	                '}';
+	    }
     
+	
 }
 

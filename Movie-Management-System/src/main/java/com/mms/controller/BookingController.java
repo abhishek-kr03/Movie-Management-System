@@ -31,3 +31,39 @@ public class BookingController {
         return bookingService.getBookingHistory(userId);
     }
 }
+
+
+//@RestController
+//@RequestMapping("/bookings")
+//public class BookingController {
+//
+//    private final RestTemplate restTemplate;
+//
+//    // Constructor injection
+//    public BookingController(RestTemplate restTemplate) {
+//        this.restTemplate = restTemplate;
+//    }
+//
+//    // Example endpoint using RestTemplate
+//    @GetMapping("/movie-details/{movieId}")
+//    public String getMovieDetails(@PathVariable int movieId) {
+//        // URL to call Movie Service API
+//        String movieServiceUrl = "http://localhost:8081/movies/" + movieId;
+//
+//        // Fetch movie details from the Movie Service using RestTemplate
+//        String movieDetails = restTemplate.getForObject(movieServiceUrl, String.class);
+//
+//        return movieDetails; // Return the response as is
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+

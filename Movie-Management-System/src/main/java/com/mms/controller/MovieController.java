@@ -7,27 +7,54 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//@RestController
+//@RequestMapping("/movies")
+//public class MovieController {
+//
+//    @Autowired
+//    private MovieService movieService;
+//
+//    
+//    @PostMapping
+//    public Movie addMovie(@RequestBody Movie movie) {
+//        return movieService.saveMovie(movie);
+//    }
+//
+//    
+//    @GetMapping
+//    public List<Movie> getAllMovies() {
+//        return movieService.getAllMovies();
+//    }
+//    
+//    @PutMapping("/{id}")
+//    public Movie updateMovie(@PathVariable Integer id, @RequestBody Movie movie) {
+//        return movieService.updateMovie(id, movie);
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @RestController
 @RequestMapping("/movies")
 public class MovieController {
-
     @Autowired
     private MovieService movieService;
 
-    
-    @PostMapping
-    public Movie addMovie(@RequestBody Movie movie) {
-        return movieService.saveMovie(movie);
-    }
-
-    
-    @GetMapping
-    public List<Movie> getAllMovies() {
-        return movieService.getAllMovies();
-    }
-    
-    @PutMapping("/{id}")
-    public Movie updateMovie(@PathVariable Integer id, @RequestBody Movie movie) {
-        return movieService.updateMovie(id, movie);
+    @GetMapping("/{movieId}")
+    public Movie getMovieById(@PathVariable int movieId) {
+        return movieService.getMovieById(movieId);
     }
 }
